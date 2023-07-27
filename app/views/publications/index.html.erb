@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Publicaciones</h1>
+
+<div id="publications">
+  <% @publications.each do |publication| %>
+    <%= render publication %>
+    <p>
+      <%= link_to "Mostrar la publicación", publication %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Crear nueva publicación", new_publication_path %>
